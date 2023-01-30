@@ -208,181 +208,181 @@
       </div>
 
       <!-- Resume section -->
-      <div class="container">
-        <div class="resume">
-          <div class="resume-aside">
-            <!-- contact aside -->
-            <div class="aside-contact">
-              <h2 class="contact-h2">
-                {{ name }}
-              </h2>
-              <div class="div-con-para">
-                <p class="contact-p">
-                  <span class="eduIcon" id="website"></span>{{ website }}
-                </p>
-                <p class="contact-p">
-                  <span class="eduIcon" id="email"></span>{{ email }}
-                </p>
-                <p class="contact-p">
-                  <span class="eduIcon" id="phone"></span>{{ phone }}
-                </p>
-                <p class="contact-p">
-                  <span class="eduIcon" id="location"></span>{{ location }}
-                </p>
-                <p class="contact-p">
-                  <span class="eduIcon" id="linkedin"></span>{{ linkedin }}
-                </p>
-                <p class="contact-p">
-                  <span class="eduIcon" id="twitter"></span>{{ twitter }}
-                </p>
-              </div>
-            </div>
 
-            <!-- education aside -->
-            <div class="aside-education">
-              <h2 class="education-h2">EDUCATION</h2>
-              <div class="div-edu-para">
-                <p class="education-p">{{ course }}</p>
-                <p class="education-p">{{ school }}</p>
-                <p class="education-p">
-                  <span class="eduIcon" id="eduIconCalender"></span>&nbsp;&nbsp;
-                  <!-- <i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp; -->
-                  {{ yearOfStart }}
-                  <span id="dash4"></span> {{ yearOfGrad }}
-                </p>
-                <p class="education-p">
-                  <span class="eduIcon" id="eduIconLocation"></span>&nbsp;&nbsp;
-                  <!-- <i class="fa-solid fa-location-dot con"></i>&nbsp;&nbsp; -->
-                  {{ schoolLocation }}
-                </p>
-              </div>
-            </div>
-
-            <!-- skills aside -->
-            <div class="aside-skills">
-              <h2>SKILLS</h2>
-              <div class="div-skills-para">
-                <p><span class="point" id="point1"></span>{{ skill1 }}</p>
-                <p><span class="point" id="point2"></span>{{ skill2 }}</p>
-                <p><span class="point" id="point3"></span>{{ skill3 }}</p>
-                <p><span class="point" id="point4"></span>{{ skill4 }}</p>
-                <p><span class="point" id="point5"></span>{{ skill5 }}</p>
-                <p><span class="point" id="point6"></span>{{ skill6 }}</p>
-                <p><span class="point" id="point7"></span>{{ skill7 }}</p>
-                <p><span class="point" id="point8"></span>{{ skill8 }}</p>
-                <p><span class="point" id="point9"></span>{{ skill9 }}</p>
-                <p><span class="point" id="point10"></span>{{ skill10 }}</p>
-              </div>
+      <div class="resume">
+        <div class="resume-aside">
+          <!-- contact aside -->
+          <div class="aside-contact">
+            <h2 class="contact-h2">
+              {{ name }}
+            </h2>
+            <div class="div-con-para">
+              <p class="contact-p">
+                <span class="eduIcon" id="website"></span>{{ website }}
+              </p>
+              <p class="contact-p">
+                <span class="eduIcon" id="email"></span>{{ email }}
+              </p>
+              <p class="contact-p">
+                <span class="eduIcon" id="phone"></span>{{ phone }}
+              </p>
+              <p class="contact-p">
+                <span class="eduIcon" id="location"></span>{{ location }}
+              </p>
+              <p class="contact-p">
+                <span class="eduIcon" id="linkedin"></span>{{ linkedin }}
+              </p>
+              <p class="contact-p">
+                <span class="eduIcon" id="twitter"></span>{{ twitter }}
+              </p>
             </div>
           </div>
 
-          <!-- Career section -->
-          <div class="aside-career">
-            <div class="career-section">
-              <h2>CAREER OBJECTIVE</h2>
-              <p>{{ objectives }}</p>
+          <!-- education aside -->
+          <div class="aside-education">
+            <h2 class="education-h2">EDUCATION</h2>
+            <div class="div-edu-para">
+              <p class="education-p">{{ course }}</p>
+              <p class="education-p">{{ school }}</p>
+              <p class="education-p">
+                <span class="eduIcon" id="eduIconCalender"></span>&nbsp;&nbsp;
+                <!-- <i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp; -->
+                {{ yearOfStart }}
+                <span id="dash4"></span> {{ yearOfGrad }}
+              </p>
+              <p class="education-p">
+                <span class="eduIcon" id="eduIconLocation"></span>&nbsp;&nbsp;
+                <!-- <i class="fa-solid fa-location-dot con"></i>&nbsp;&nbsp; -->
+                {{ schoolLocation }}
+              </p>
             </div>
+          </div>
 
-            <!-- Work experience -->
-            <div class="work-experience">
-              <h2>WORK EXPERIENCE</h2>
-
-              <!-- first work experience -->
-              <div class="first-experience">
-                <h2>{{ jobTitle1 }}</h2>
-                <p>{{ company1 }}</p>
-                <p>
-                  <span class="yearStartFinish" id="calender1"></span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;{{ yearStarted1 }}
-                  <span id="dash1"></span>&nbsp;&nbsp;&nbsp;&nbsp;{{
-                    yearFinished1
-                  }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                    class="yearStartFinish"
-                    id="location1"
-                  ></span
-                  >{{ workLocation1 }}
-                </p>
-                <div class="point-class">
-                  <p>
-                    <span class="point" id="res-point1a"></span
-                    >{{ responsibility1a }}
-                  </p>
-                  <p>
-                    <span class="point" id="res-point1b"></span
-                    >{{ responsibility1b }}
-                  </p>
-                  <p>
-                    <span class="point" id="res-point1c"></span
-                    >{{ responsibility1c }}
-                  </p>
-                </div>
-              </div>
-
-              <!-- second work experience -->
-              <div class="second-experience">
-                <h2>{{ jobTitle2 }}</h2>
-                <p>{{ company2 }}</p>
-                <p>
-                  <span class="yearStartFinish" id="calender2"></span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;{{ yearStarted2 }}
-                  <span id="dash2"></span>&nbsp;&nbsp;&nbsp;&nbsp;{{
-                    yearFinished2
-                  }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                    class="yearStartFinish"
-                    id="location2"
-                  ></span
-                  >{{ workLocation2 }}
-                </p>
-                <div class="point-class">
-                  <p>
-                    <span class="point" id="res-point2a"></span
-                    >{{ responsibility2a }}
-                  </p>
-                  <p>
-                    <span class="point" id="res-point2b"></span
-                    >{{ responsibility2b }}
-                  </p>
-                  <p>
-                    <span class="point" id="res-point2c"></span
-                    >{{ responsibility2c }}
-                  </p>
-                </div>
-              </div>
-
-              <!-- third work experience -->
-              <div class="third-experience">
-                <h2>{{ jobTitle3 }}</h2>
-                <p>{{ company3 }}</p>
-                <p>
-                  <span class="yearStartFinish" id="calender3"></span
-                  >&nbsp;&nbsp;&nbsp;&nbsp;{{ yearStarted3 }}
-                  <span id="dash3"></span>&nbsp;&nbsp;&nbsp;&nbsp;{{
-                    yearFinished3
-                  }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                    class="yearStartFinish"
-                    id="location3"
-                  ></span
-                  >{{ workLocation3 }}
-                </p>
-                <div class="point-class">
-                  <p>
-                    <span class="point" id="res-point3a"></span
-                    >{{ responsibility3a }}
-                  </p>
-                  <p>
-                    <span class="point" id="res-point3b"></span
-                    >{{ responsibility3b }}
-                  </p>
-                  <p>
-                    <span class="point" id="res-point3c"></span
-                    >{{ responsibility3c }}
-                  </p>
-                </div>
-              </div>
+          <!-- skills aside -->
+          <div class="aside-skills">
+            <h2>SKILLS</h2>
+            <div class="div-skills-para">
+              <p><span class="point" id="point1"></span>{{ skill1 }}</p>
+              <p><span class="point" id="point2"></span>{{ skill2 }}</p>
+              <p><span class="point" id="point3"></span>{{ skill3 }}</p>
+              <p><span class="point" id="point4"></span>{{ skill4 }}</p>
+              <p><span class="point" id="point5"></span>{{ skill5 }}</p>
+              <p><span class="point" id="point6"></span>{{ skill6 }}</p>
+              <p><span class="point" id="point7"></span>{{ skill7 }}</p>
+              <p><span class="point" id="point8"></span>{{ skill8 }}</p>
+              <p><span class="point" id="point9"></span>{{ skill9 }}</p>
+              <p><span class="point" id="point10"></span>{{ skill10 }}</p>
             </div>
           </div>
         </div>
 
+        <!-- Career section -->
+        <div class="aside-career">
+          <div class="career-section">
+            <h2>CAREER OBJECTIVE</h2>
+            <p>{{ objectives }}</p>
+          </div>
+
+          <!-- Work experience -->
+          <div class="work-experience">
+            <h2>WORK EXPERIENCE</h2>
+
+            <!-- first work experience -->
+            <div class="first-experience">
+              <h2>{{ jobTitle1 }}</h2>
+              <p>{{ company1 }}</p>
+              <p>
+                <span class="yearStartFinish" id="calender1"></span
+                >&nbsp;&nbsp;&nbsp;&nbsp;{{ yearStarted1 }}
+                <span id="dash1"></span>&nbsp;&nbsp;&nbsp;&nbsp;{{
+                  yearFinished1
+                }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="yearStartFinish"
+                  id="location1"
+                ></span
+                >{{ workLocation1 }}
+              </p>
+              <div class="point-class">
+                <p>
+                  <span class="point" id="res-point1a"></span
+                  >{{ responsibility1a }}
+                </p>
+                <p>
+                  <span class="point" id="res-point1b"></span
+                  >{{ responsibility1b }}
+                </p>
+                <p>
+                  <span class="point" id="res-point1c"></span
+                  >{{ responsibility1c }}
+                </p>
+              </div>
+            </div>
+
+            <!-- second work experience -->
+            <div class="second-experience">
+              <h2>{{ jobTitle2 }}</h2>
+              <p>{{ company2 }}</p>
+              <p>
+                <span class="yearStartFinish" id="calender2"></span
+                >&nbsp;&nbsp;&nbsp;&nbsp;{{ yearStarted2 }}
+                <span id="dash2"></span>&nbsp;&nbsp;&nbsp;&nbsp;{{
+                  yearFinished2
+                }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="yearStartFinish"
+                  id="location2"
+                ></span
+                >{{ workLocation2 }}
+              </p>
+              <div class="point-class">
+                <p>
+                  <span class="point" id="res-point2a"></span
+                  >{{ responsibility2a }}
+                </p>
+                <p>
+                  <span class="point" id="res-point2b"></span
+                  >{{ responsibility2b }}
+                </p>
+                <p>
+                  <span class="point" id="res-point2c"></span
+                  >{{ responsibility2c }}
+                </p>
+              </div>
+            </div>
+
+            <!-- third work experience -->
+            <div class="third-experience">
+              <h2>{{ jobTitle3 }}</h2>
+              <p>{{ company3 }}</p>
+              <p>
+                <span class="yearStartFinish" id="calender3"></span
+                >&nbsp;&nbsp;&nbsp;&nbsp;{{ yearStarted3 }}
+                <span id="dash3"></span>&nbsp;&nbsp;&nbsp;&nbsp;{{
+                  yearFinished3
+                }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                  class="yearStartFinish"
+                  id="location3"
+                ></span
+                >{{ workLocation3 }}
+              </p>
+              <div class="point-class">
+                <p>
+                  <span class="point" id="res-point3a"></span
+                  >{{ responsibility3a }}
+                </p>
+                <p>
+                  <span class="point" id="res-point3b"></span
+                  >{{ responsibility3b }}
+                </p>
+                <p>
+                  <span class="point" id="res-point3c"></span
+                  >{{ responsibility3c }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button">
         <button class="btn">Click here to download</button>
       </div>
     </div>
@@ -764,5 +764,16 @@ button.btn:hover {
   background: #328078;
   color: #fff;
   border: 1px #328078 solid;
+}
+
+div.button {
+  position: relative;
+  margin: 40px;
+}
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>
