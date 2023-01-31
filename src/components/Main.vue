@@ -1,11 +1,24 @@
 <template>
-  <div class="main">
+  <div class="container">
     <div class="grid-container">
       <!-- <Form /> -->
       <!-- Aside -->
       <div class="aside">
         <!-- contact information -->
         <div class="form">
+          <h3>
+            Choose theme&nbsp;&nbsp;&nbsp;&nbsp;<i
+              @click="firstTheme"
+              class="fa-solid fa-circle theme1"
+            ></i
+            >&nbsp;&nbsp;
+            <i @click="secondTheme" class="fa-solid fa-circle theme2"></i
+            >&nbsp;&nbsp;
+            <i @click="thirdTheme" class="fa-solid fa-circle theme3"></i
+            >&nbsp;&nbsp;
+            <i @click="fourthTheme" class="fa-solid fa-circle theme4"></i
+            >&nbsp;&nbsp;
+          </h3>
           <h2>Contact Information</h2>
           <label for="name">First and Last Name:</label>
           <input type="text" v-on:input="makeUpper" v-model="name" /><br />
@@ -67,8 +80,8 @@
           <input v-on:input="listenFor14" type="text" v-model="skill8" /><br />
           <label for="skill9">Skill 9</label>
           <input v-on:input="listenFor15" type="text" v-model="skill9" /><br />
-          <label for="skill10">Skill 10</label>
-          <input v-on:input="listenFor16" type="text" v-model="skill10" /><br />
+          <!-- <label for="skill10">Skill 10</label>
+          <input v-on:input="listenFor16" type="text" v-model="skill10" /><br /> -->
         </div>
 
         <!-- Career Objectives Form -->
@@ -209,10 +222,13 @@
 
       <!-- Resume section -->
 
-      <div class="resume">
+      <div class="resume" id="canvas">
         <div class="resume-aside">
           <!-- contact aside -->
-          <div class="aside-contact">
+          <div
+            class="aside-contact"
+            v-bind:style="{ 'background-color': this.color }"
+          >
             <h2 class="contact-h2">
               {{ name }}
             </h2>
@@ -243,7 +259,9 @@
             <h2 class="education-h2">EDUCATION</h2>
             <div class="div-edu-para">
               <p class="education-p">{{ course }}</p>
-              <p class="education-p">{{ school }}</p>
+              <p class="education-p" v-bind:style="{ color: this.color }">
+                {{ school }}
+              </p>
               <p class="education-p">
                 <span class="eduIcon" id="eduIconCalender"></span>&nbsp;&nbsp;
                 <!-- <i class="fa-solid fa-calendar-days"></i>&nbsp;&nbsp; -->
@@ -262,16 +280,40 @@
           <div class="aside-skills">
             <h2>SKILLS</h2>
             <div class="div-skills-para">
-              <p><span class="point" id="point1"></span>{{ skill1 }}</p>
-              <p><span class="point" id="point2"></span>{{ skill2 }}</p>
-              <p><span class="point" id="point3"></span>{{ skill3 }}</p>
-              <p><span class="point" id="point4"></span>{{ skill4 }}</p>
-              <p><span class="point" id="point5"></span>{{ skill5 }}</p>
-              <p><span class="point" id="point6"></span>{{ skill6 }}</p>
-              <p><span class="point" id="point7"></span>{{ skill7 }}</p>
-              <p><span class="point" id="point8"></span>{{ skill8 }}</p>
-              <p><span class="point" id="point9"></span>{{ skill9 }}</p>
-              <p><span class="point" id="point10"></span>{{ skill10 }}</p>
+              <span class="pointz" id="point1"></span>
+              <p>{{ skill1 }}</p>
+            </div>
+            <div class="div-skills-para">
+              <span class="pointz" id="point2"></span>
+              <p>{{ skill2 }}</p>
+            </div>
+            <div class="div-skills-para">
+              <span class="pointz" id="point3"></span>
+              <p>{{ skill3 }}</p>
+            </div>
+            <div class="div-skills-para">
+              <span class="pointz" id="point4"></span>
+              <p>{{ skill4 }}</p>
+            </div>
+            <div class="div-skills-para">
+              <span class="pointz" id="point5"></span>
+              <p>{{ skill5 }}</p>
+            </div>
+            <div class="div-skills-para">
+              <span class="pointz" id="point6"></span>
+              <p>{{ skill6 }}</p>
+            </div>
+            <div class="div-skills-para">
+              <span class="pointz" id="point7"></span>
+              <p>{{ skill7 }}</p>
+            </div>
+            <div class="div-skills-para">
+              <span class="pointz" id="point8"></span>
+              <p>{{ skill8 }}</p>
+            </div>
+            <div class="div-skills-para">
+              <span class="pointz" id="point9"></span>
+              <p>{{ skill9 }}</p>
             </div>
           </div>
         </div>
@@ -290,7 +332,9 @@
             <!-- first work experience -->
             <div class="first-experience">
               <h2>{{ jobTitle1 }}</h2>
-              <p>{{ company1 }}</p>
+              <p v-bind:style="{ color: this.color }">
+                {{ company1 }}
+              </p>
               <p>
                 <span class="yearStartFinish" id="calender1"></span
                 >&nbsp;&nbsp;&nbsp;&nbsp;{{ yearStarted1 }}
@@ -303,25 +347,27 @@
                 >{{ workLocation1 }}
               </p>
               <div class="point-class">
-                <p>
-                  <span class="point" id="res-point1a"></span
-                  >{{ responsibility1a }}
-                </p>
-                <p>
-                  <span class="point" id="res-point1b"></span
-                  >{{ responsibility1b }}
-                </p>
-                <p>
-                  <span class="point" id="res-point1c"></span
-                  >{{ responsibility1c }}
-                </p>
+                <div class="div-point1">
+                  <span class="point div-point-child" id="res-point1a"></span>
+                  <p>{{ responsibility1a }}</p>
+                </div>
+                <div class="div-point1">
+                  <span class="point div-point-child" id="res-point1b"></span>
+                  <p>{{ responsibility1b }}</p>
+                </div>
+                <div class="div-point1">
+                  <span class="point div-point-child" id="res-point1c"></span>
+                  <p>{{ responsibility1c }}</p>
+                </div>
               </div>
             </div>
 
             <!-- second work experience -->
             <div class="second-experience">
               <h2>{{ jobTitle2 }}</h2>
-              <p>{{ company2 }}</p>
+              <p v-bind:style="{ color: this.color }">
+                {{ company2 }}
+              </p>
               <p>
                 <span class="yearStartFinish" id="calender2"></span
                 >&nbsp;&nbsp;&nbsp;&nbsp;{{ yearStarted2 }}
@@ -334,25 +380,27 @@
                 >{{ workLocation2 }}
               </p>
               <div class="point-class">
-                <p>
-                  <span class="point" id="res-point2a"></span
-                  >{{ responsibility2a }}
-                </p>
-                <p>
-                  <span class="point" id="res-point2b"></span
-                  >{{ responsibility2b }}
-                </p>
-                <p>
-                  <span class="point" id="res-point2c"></span
-                  >{{ responsibility2c }}
-                </p>
+                <div class="div-point1">
+                  <span class="point div-point-child" id="res-point2a"></span>
+                  <p>{{ responsibility2a }}</p>
+                </div>
+                <div class="div-point1">
+                  <span class="point div-point-child" id="res-point2b"></span>
+                  <p>{{ responsibility2b }}</p>
+                </div>
+                <div class="div-point1">
+                  <span class="point div-point-child" id="res-point2c"></span>
+                  <p>{{ responsibility2c }}</p>
+                </div>
               </div>
             </div>
 
             <!-- third work experience -->
             <div class="third-experience">
               <h2>{{ jobTitle3 }}</h2>
-              <p>{{ company3 }}</p>
+              <p v-bind:style="{ color: this.color }">
+                {{ company3 }}
+              </p>
               <p>
                 <span class="yearStartFinish" id="calender3"></span
                 >&nbsp;&nbsp;&nbsp;&nbsp;{{ yearStarted3 }}
@@ -365,31 +413,32 @@
                 >{{ workLocation3 }}
               </p>
               <div class="point-class">
-                <p>
-                  <span class="point" id="res-point3a"></span
-                  >{{ responsibility3a }}
-                </p>
-                <p>
-                  <span class="point" id="res-point3b"></span
-                  >{{ responsibility3b }}
-                </p>
-                <p>
-                  <span class="point" id="res-point3c"></span
-                  >{{ responsibility3c }}
-                </p>
+                <div class="div-point1">
+                  <span class="point div-point-child" id="res-point3a"></span>
+                  <p>{{ responsibility3a }}</p>
+                </div>
+                <div class="div-point1">
+                  <span class="point div-point-child" id="res-point3b"></span>
+                  <p>{{ responsibility3b }}</p>
+                </div>
+                <div class="div-point1">
+                  <span class="point div-point-child" id="res-point3c"></span>
+                  <p>{{ responsibility3c }}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="button">
-        <button class="btn">Click here to download</button>
+        <div class="button">
+          <button @click="download" class="btn">Click here to download</button>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import html2canvas from "html2canvas";
 // import Form from "./Form.vue";
 // import ""
 export default {
@@ -400,6 +449,7 @@ export default {
 
   data() {
     return {
+      color: "#328078",
       name: "",
       website: "",
       email: "",
@@ -458,6 +508,34 @@ export default {
   computed: {},
 
   methods: {
+    download() {
+      // console.log("im clicked");
+      let element = document.querySelector("#canvas");
+      html2canvas(element).then((canvas) => {
+        // Convert the canvas to an image
+        let image = canvas
+          .toDataURL("image/png")
+          .replace("image/png", "image/octet-stream");
+        // Download the image
+        let link = document.createElement("a");
+        link.download = "your-resume.png";
+        link.href = image;
+        link.click();
+      });
+    },
+    firstTheme() {
+      this.color = "#328078";
+    },
+    secondTheme() {
+      this.color = "#9d454c";
+    },
+    thirdTheme() {
+      this.color = "#262c53";
+    },
+    fourthTheme() {
+      this.color = "#6e462c";
+    },
+    changeColor() {},
     listenFor1() {
       const x = document.getElementById("website");
       x.innerHTML = `<i class="fa-solid fa-globe con"></i>&nbsp;&nbsp;`;
@@ -528,7 +606,7 @@ export default {
     },
     listenFor17() {
       const x = document.getElementById("res-point1a");
-      x.innerHTML = `<i class="fa-solid fa-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`;
+      x.innerHTML = `<i class="fa-solid fa-circle"></i>`;
     },
     listenFor18() {
       const x = document.getElementById("res-point1b");
@@ -608,16 +686,33 @@ export default {
 
 <style scoped>
 .grid-container {
+  /* max-width: 100%; */
   display: grid;
   grid-template-columns: 30% 70%;
   background: rgba(191, 188, 192, 0.2);
   /* grid-template-rows: repeat(1, 1fr); */
+}
+.resume-aside {
+  /* max-width: 100%; */
+  background: #f8f8f8;
+  /* display: block; */
+  margin: 0px;
+  padding: 0px;
 }
 
 .aside {
   margin: 20px;
   padding: 10px;
   background: rgba(209, 215, 221, 0.4);
+}
+.resume {
+  /* max-width: 100%; */
+  display: grid;
+  /* grid-template-columns: 323.3px 646.7px; */
+  grid-template-columns: 33.33% 66.67%;
+  margin: 20px 20px 10px 0px;
+  height: 1255px;
+  grid-template-rows: repeat(1 1fr);
 }
 
 label {
@@ -643,41 +738,14 @@ textarea[type="text" i] {
   display: block;
 }
 
-.resume {
-  display: grid;
-  grid-template-columns: 323.3px 931.7px;
-  margin: 20px 20px 10px 0px;
-  height: 1255px;
-}
-
-.resume-aside {
-  background: #f8f8f8;
-  display: block;
-  margin: 0px;
-  padding: 0px;
-}
-
 .aside-contact {
   margin: 0px;
-  padding: 20px 40px;
+  padding: 30px 20px 20px 40px;
   /* width: 323.3px; */
-  height: 323.3px;
+  height: 300px;
   background: #328078;
   color: #fff;
   /* padding: 0 20px; */
-}
-
-.div-con-para {
-  margin: 20px 0 0 0;
-}
-.contact-p,
-.contact-h2 {
-  margin: 0px;
-  padding: 0px;
-}
-
-.contact-p {
-  margin-bottom: 20px;
 }
 
 .aside-education {
@@ -695,16 +763,32 @@ textarea[type="text" i] {
 }
 
 .aside-career {
-  width: 646.6px;
+  max-width: 646.6px;
   height: 1255px;
   background: #fff;
   padding: 0 10px;
   text-align: justify;
 }
 
+.div-con-para {
+  margin: 20px 0 0 0;
+}
+.contact-p,
+.contact-h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.contact-p {
+  margin-bottom: 20px;
+}
+
 .career-section {
-  padding: 0 10px;
-  margin-bottom: 128px;
+  height: 360px;
+  padding: 10px 10px 0px 10px;
+}
+
+@media screen and (max-width: 500px) {
 }
 
 .work-experience {
@@ -714,13 +798,46 @@ textarea[type="text" i] {
   margin: 10px 0 20px 20px;
 }
 
+.div-skills-para {
+  display: grid;
+  grid-template-columns: 10px 250px;
+  column-gap: 15px;
+  margin-bottom: 10px;
+}
+
+div.div-skills-para p {
+  margin: 0px;
+  /* margin-top: 10px; */
+}
+.pointz {
+  margin-top: 4px;
+  font-size: 8px;
+  /* margin-top: 10px; */
+}
+
 .div-con-para {
   margin-top: 30px;
 }
 
+.div-point1 {
+  display: grid;
+  grid-template-columns: 10px 500px;
+  column-gap: 30px;
+  /* margin-bottom: 10px; */
+}
+
+div.div-point1 p {
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.div-point-child {
+  margin-top: 16px;
+}
+
 .point {
-  font-size: 6px;
-  /* margin-left: 20px; */
+  font-size: 8px;
+  margin-left: 20px;
 }
 
 .yearStartFinish {
@@ -742,7 +859,7 @@ button.btn {
   margin-right: auto; */
   /* align-content: center;
   align-items: center; */
-  /* text-align: center; */
+  text-align: center;
   color: #328078;
   background: #fff;
   border: 1px #328078 solid;
@@ -757,14 +874,29 @@ button.btn:hover {
   border: 1px #328078 solid;
 }
 
-div.button {
+/* div.button {
   position: relative;
   margin: 40px;
-}
-button {
+} */
+/* button {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+} */
+/* .button {
+} */
+
+.theme1 {
+  color: #328078;
+}
+.theme2 {
+  color: #9d454c;
+}
+.theme3 {
+  color: #262c53;
+}
+.theme4 {
+  color: #6e462c;
 }
 </style>

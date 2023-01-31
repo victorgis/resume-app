@@ -1,7 +1,7 @@
 <template>
   <div class="header-nav">
-    <nav :style="{ width: '100%' }">
-      <h1 class="header-h1">Resume App</h1>
+    <nav>
+      <h1>Resume App</h1>
       <div class="socials">
         <ul>
           <li>
@@ -40,20 +40,15 @@ export default {
 </script>
 
 <style scoped>
-nav {
-  display: flex;
-  justify-content: space-between; /* or center, flex-start, flex-end */
-  align-items: center; /* or flex-start, flex-end, baseline */
-}
-
 .header-nav {
   background: #3564;
   padding: 8px;
 }
-.header-h1 {
-  margin: 16px;
-  display: grid; /* sets the container to be a grid layout */
-  grid-template-columns: repeat(1, 1fr);
+nav {
+  display: flex;
+  justify-content: space-between; /* or center, flex-start, flex-end */
+  align-items: center; /* or flex-start, flex-end, baseline */
+  padding: 0 20px;
 }
 
 .socials ul {
