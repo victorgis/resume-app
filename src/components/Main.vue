@@ -3,6 +3,7 @@
     <div class="main">
       <div class="grid-container">
         <!-- <Form /> -->
+
         <!-- Aside -->
         <div class="aside">
           <div class="form-container">
@@ -33,7 +34,6 @@
               <label for="website">Portfolio website if any</label>
               <input
                 type="text"
-                id="website"
                 name="website"
                 v-model="website"
                 v-on:input="listenFor1"
@@ -41,7 +41,6 @@
               <label for="email">Email Address:</label>
               <input
                 type="email"
-                id="email"
                 name="email"
                 v-model="email"
                 v-on:input="listenFor2"
@@ -49,7 +48,6 @@
               <label for="phone">Phone Number</label>
               <input
                 type="text"
-                id="phone"
                 name="phone"
                 v-model="phone"
                 v-on:input="listenFor3"
@@ -57,7 +55,6 @@
               <label for="location">Location/City & Country</label>
               <input
                 type="text"
-                id="location"
                 name="location"
                 v-model="location"
                 v-on:input="listenFor4"
@@ -65,7 +62,6 @@
               <label for="linkedin">Linkedin Profile</label>
               <input
                 type="text"
-                id="linkedin"
                 name="linkedin"
                 v-model="linkedin"
                 v-on:input="listenFor5"
@@ -73,7 +69,6 @@
               <label for="twitter">Twitter Profile</label>
               <input
                 type="text"
-                id="twitter"
                 name="twitter"
                 v-model="twitter"
                 v-on:input="listenFor6"
@@ -425,7 +420,7 @@
             </div>
           </div>
 
-          <nav aria-label="Form pagination">
+          <!-- <nav aria-label="Form pagination">
             <ul class="pagination">
               <li class="page-item" :class="{ disabled: currentPage === 1 }">
                 <a
@@ -462,7 +457,11 @@
                 >
               </li>
             </ul>
-          </nav>
+          </nav> -->
+          <p>* Scroll through to see the rest of the form</p>
+          <div class="ads">
+            <small>Ads section</small>
+          </div>
         </div>
 
         <!-- Resume section -->
@@ -703,14 +702,12 @@
                 </div>
               </div>
             </div>
-            <div class="button">
-              <button @click="download" class="btn">
-                Click here to download
-              </button>
-            </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="button">
+      <button @click="download" class="btn">Click here to download</button>
     </div>
   </div>
 </template>
@@ -1008,6 +1005,9 @@ h1,
 h3 {
   font-size: 20px !important;
 }
+.container {
+  text-align: center;
+}
 .main {
   margin-left: 20px;
   margin-right: 20px;
@@ -1027,23 +1027,27 @@ h3 {
   padding: 10px;
   background: rgba(209, 215, 221, 0.4);
   text-align: left;
+  height: 1162px;
 }
 
 .resume {
   padding: 10px;
   background: rgba(209, 215, 221, 0.4);
+  height: 1171px;
 }
 
 .resume-aside {
   background: #f8f8f8;
   margin: 0px;
   padding: 0px;
+  height: 1162px;
 }
 
 .career-aside {
   background: #fff;
   padding: 0 10px;
   text-align: justify;
+  height: 1162px;
 }
 
 .resume-grid {
@@ -1082,7 +1086,7 @@ textarea[type="text" i] {
 .aside-contact {
   margin: 0px;
   padding: 30px 20px 20px 40px;
-  height: 300px;
+  height: 350px;
   background: #328078;
   color: #fff;
 }
@@ -1113,7 +1117,7 @@ textarea[type="text" i] {
 }
 
 .career-section {
-  height: 320px;
+  height: 370px;
   padding: 10px 10px 0px 10px;
 }
 
@@ -1152,6 +1156,7 @@ div.div-skills-para p {
 div.div-point1 p {
   margin: 0px;
   margin-top: 10px;
+  width: 440px;
 }
 
 .div-point-child {
@@ -1209,10 +1214,8 @@ button.btn:hover {
 /* .div-pagination {
  
 } */
-
-.pagination {
-  width: 80px;
-  padding: 5px;
-  margin: 0 10px;
+.ads {
+  height: 400px;
+  background: #f4f4f4;
 }
 </style>
